@@ -25,7 +25,7 @@ http://localhost/LibrarySystem1/
 
 | Role    | Email              | Password    |
 |---------|--------------------|-------------|
-| Admin   | admin@yic.edu.sa   | password123 |
+| Admin   | admin@yic.edu.sa   | 123456 |
 | Student | danah@gmail.com    | password123 |
 | Student | lamar@gmail.com    | password123 |
 | Student | refal@gmail.com    | password123 |
