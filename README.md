@@ -8,9 +8,7 @@
 ## 🚀 Setup Instructions
 
 1. **Project location:**
-   ```
-   D:\laragon\www\LibrarySystem1\
-   ```
+D:\laragon\www\LibrarySystem1\
 
 2. **Import the database:**
    - Open `http://localhost/phpmyadmin`
@@ -19,9 +17,7 @@
    - Click **Go**
 
 3. **Open the project in your browser:**
-   ```
-   http://localhost/LibrarySystem1/
-   ```
+http://localhost/LibrarySystem1/
 
 ---
 
@@ -48,6 +44,7 @@
 
 - PDO Prepared Statements — SQL injection prevention
 - `htmlspecialchars()` on all output — XSS prevention
+- CSRF tokens on all POST forms — CSRF attack prevention
 - Server-side and client-side input validation
 - `session_regenerate_id()` on login — session fixation prevention
 - Role-based access control (admin / student)
@@ -56,13 +53,12 @@
 ---
 
 ## 📁 File Structure
-
-```
 LibrarySystem1/
 ├── index.php
 ├── README.md
 ├── includes/
-│   └── config.php
+│   ├── config.php
+│   └── csrf_helper.php
 ├── auth/
 │   ├── login.php
 │   ├── register.php
@@ -81,5 +77,5 @@ LibrarySystem1/
 │   ├── css/style.css
 │   └── js/script.js
 └── sql/
-    └── library_db.sql
-```
+└── library_db.sql
+
