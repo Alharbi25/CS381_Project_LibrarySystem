@@ -32,13 +32,12 @@ $recent = $pdo->query("
 </head>
 <body>
 <header><h1>📚 YIC Library System — Admin</h1></header>
-
 <nav role="navigation">
     <a href="dashboard.php">🏠 Dashboard</a>
     <a href="manage_books.php">📚 Manage Books</a>
+    <a href="add_book.php">➕ Add Book</a>
     <a href="../auth/logout.php">🚪 Logout (<?= htmlspecialchars($_SESSION['username']) ?>)</a>
 </nav>
-
 <main class="container">
     <?php if (isset($_GET['msg'])): ?>
         <div class="alert-success">✅ <?= htmlspecialchars($_GET['msg']) ?></div>
@@ -49,7 +48,6 @@ $recent = $pdo->query("
         <p style="margin-bottom:16px;color:#666;">
             Welcome back, <strong><?= htmlspecialchars($_SESSION['username']) ?></strong>!
         </p>
-
         <div class="stats-grid">
             <article class="stat-card">
                 <div class="stat-number"><?= $totalBooks ?></div>
@@ -96,15 +94,16 @@ $recent = $pdo->query("
                 </tbody>
             </table>
         </div>
-        <p style="margin-top:20px;">
-            <a href="manage_books.php" class="btn"
-               style="width:auto;padding:11px 28px;display:inline-block;">
-               ➡️ Manage Books
+        <p style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="manage_books.php" class="btn" style="width:auto;padding:11px 24px;display:inline-block;">
+                📚 Manage Books
+            </a>
+            <a href="add_book.php" class="btn" style="width:auto;padding:11px 24px;display:inline-block;background:#2d6a4f;">
+                ➕ Add New Book
             </a>
         </p>
     </section>
 </main>
-
 <footer><p>&copy; 2026 Yanbu Industrial College — Library System</p></footer>
 <script src="../assets/js/script.js"></script>
 </body>
