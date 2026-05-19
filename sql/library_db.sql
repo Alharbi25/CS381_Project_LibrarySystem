@@ -1,7 +1,4 @@
--- ============================================
--- YIC Library System — library_db.sql
--- Import once in phpMyAdmin
--- ============================================
+
 
 CREATE DATABASE IF NOT EXISTS library_db
     CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -11,10 +8,7 @@ DROP TABLE IF EXISTS transactions;
 DROP TABLE IF EXISTS books;
 DROP TABLE IF EXISTS users;
 
--- ============================================
--- users  (1 admin + 10 students = 11 rows)
--- All passwords = password123
--- ============================================
+
 CREATE TABLE users (
     id       INT          NOT NULL AUTO_INCREMENT,
     username VARCHAR(50)  NOT NULL,
@@ -38,9 +32,6 @@ INSERT INTO users (username, email, password, role) VALUES
 ('Lina Turki',  'lina@yic.edu.sa',  '$2y$10$X8U1lb3HJiCuoukZxLXgNOjmVtBVNzyabpKAGbRJHq2FJfrYnSOI2', 'student'),
 ('Reem Fahad',  'reem@gmail.com',   '$2y$10$X8U1lb3HJiCuoukZxLXgNOjmVtBVNzyabpKAGbRJHq2FJfrYnSOI2', 'student');
 
--- ============================================
--- books  (11 rows)
--- ============================================
 CREATE TABLE books (
     id       INT          NOT NULL AUTO_INCREMENT,
     title    VARCHAR(255) NOT NULL,
@@ -63,9 +54,7 @@ INSERT INTO books (title, author, category, status) VALUES
 ('Digital Ethics',            'Phil Smith',         'Philosophy', 'available'),
 ('A History of Saudi Arabia', 'Madawi Al-Rasheed',  'History',    'available');
 
--- ============================================
--- transactions  (10 rows)
--- ============================================
+
 CREATE TABLE transactions (
     id          INT           NOT NULL AUTO_INCREMENT,
     user_id     INT           NOT NULL,
