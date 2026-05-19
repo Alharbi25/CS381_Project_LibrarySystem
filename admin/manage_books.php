@@ -21,13 +21,12 @@ $books = $pdo->query("SELECT * FROM books ORDER BY id DESC")->fetchAll();
 </head>
 <body>
 <header><h1>📚 YIC Library System — Admin</h1></header>
-
 <nav role="navigation">
     <a href="dashboard.php">🏠 Dashboard</a>
     <a href="manage_books.php">📚 Manage Books</a>
+    <a href="add_book.php">➕ Add Book</a>
     <a href="../auth/logout.php">🚪 Logout</a>
 </nav>
-
 <main class="container">
     <section>
         <h2 class="page-title">📚 Manage Books</h2>
@@ -38,6 +37,11 @@ $books = $pdo->query("SELECT * FROM books ORDER BY id DESC")->fetchAll();
         <?php if (isset($_GET['error'])): ?>
             <div class="alert-error">❌ <?= htmlspecialchars($_GET['error']) ?></div>
         <?php endif; ?>
+
+        <a href="add_book.php" class="btn"
+           style="width:auto;padding:10px 20px;display:inline-block;margin-bottom:16px;">
+            ➕ Add New Book
+        </a>
 
         <div class="table-responsive">
             <table>
@@ -74,7 +78,6 @@ $books = $pdo->query("SELECT * FROM books ORDER BY id DESC")->fetchAll();
         <a href="dashboard.php" class="back-link">← Back to Dashboard</a>
     </section>
 </main>
-
 <footer><p>&copy; 2026 Yanbu Industrial College — Library System</p></footer>
 <script src="../assets/js/script.js"></script>
 </body>
