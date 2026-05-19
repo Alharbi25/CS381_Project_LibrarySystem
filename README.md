@@ -23,9 +23,9 @@ http://localhost/LibrarySystem1/
 
 ## 🔑 Login Credentials
 
-| Role    | Email              | Password    |
-|---------|--------------------|-------------|
-| Admin   | admin@yic.edu.sa   | 123456 |
+| Role    | Email              | Password |
+|---------|--------------------|----------|
+| Admin   | admin@yic.edu.sa   | 123456   |
 | Student | danah@gmail.com    | password123 |
 | Student | lamar@gmail.com    | password123 |
 | Student | refal@gmail.com    | password123 |
@@ -36,7 +36,7 @@ http://localhost/LibrarySystem1/
 
 **Student:** Register · Login / Logout · Browse books · Search · Borrow · View history · Return books
 
-**Admin:** Login / Logout · Dashboard with live stats · View recent transactions · Manage books · Delete books
+**Admin:** Login / Logout · Dashboard with live stats · View recent transactions · Add new books · Manage books · Delete books
 
 ---
 
@@ -69,6 +69,7 @@ LibrarySystem1/
 ├── admin/
 │   ├── dashboard.php
 │   ├── manage_books.php
+│   ├── add_book.php
 │   └── delete_book.php
 ├── actions/
 │   ├── borrow.php
@@ -78,4 +79,3 @@ LibrarySystem1/
 │   └── js/script.js
 └── sql/
 └── library_db.sql
-
